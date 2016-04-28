@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import ohtu.data_access.FileReferenceDao;
-import ohtu.domain.Reference;
 import ohtu.io.ConsoleIO;
 import ohtu.io.IO;
+import ohtu.domain.*;
 
 /**
  *
@@ -38,16 +38,16 @@ public class UI {
     //koodia pitää muokata, jos haluaa nuo vaihtoehdon sisältävät tägit
     private void createMapLists() {
         this.lists = new HashMap<String, ArrayList<ArrayList<String>>>();
-        String[] requiredArticle = {"author", "title", "journal", "year"};
-        String[] optionalArticle = {"volume", "number", "pages", "month", "note", "key"};
+        String[] requiredArticle = Article.FORCE_FIELDS;
+        String[] optionalArticle = Article.OPTIONAL_FIELDS;
         
-        String[] requiredInproceedings = {"author", "title", "booktitle", "year"};
-        String[] optionalInproceedings = {"editor", "volume", "series", "pages", "address", "month", "organization", "publisher", "note", "key"};
+        String[] requiredInproceedings = Inproceedings.FORCE_FIELDS;
+        String[] optionalInproceedings = Inproceedings.OPTIONAL_FIELDS;
 //        String[] optionalInproceedings = {"editor", "volume/number", "series", "pages", "address", "month", "organization", "publisher", "note", "key"};
         
-        String[] requiredBook = {"author", "title", "publisher", "year"};
+        String[] requiredBook = Book.FORCE_FIELDS;
 //        String[] requiredBook = {"author/editor", "title", "publisher", "year"};
-        String[] optionalBook = {"volume", "series", "address", "edition", "month", "note", "key"};
+        String[] optionalBook = Book.OPTIONAL_FIELDS;
 //        String[] optionalBook = {"volume/number", "series", "address", "edition", "month", "note", "key"};
         
         ArrayList<ArrayList<String>> article = new ArrayList<ArrayList<String>>();        

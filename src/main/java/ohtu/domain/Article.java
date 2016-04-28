@@ -10,8 +10,8 @@ package ohtu.domain;
  * @author Daniel Viktor Isaac
  */
 public class Article extends Reference {
-    final String[] FORCE_FIELDS = {"author", "title", "journal", "year"};
-    final String[] OPTIONAL_FIELDS = {"volume", "number", "pages", "month", "note", "key"};
+    public final static String[] FORCE_FIELDS = {"author", "title", "journal", "year"};
+    public final static String[] OPTIONAL_FIELDS = {"volume", "number", "pages", "month", "note", "key"};
     public Article(String ck) {
         super(ck);
         super.addRequirements(FORCE_FIELDS, OPTIONAL_FIELDS);

@@ -12,8 +12,8 @@ package ohtu.domain;
 
 public class Book extends Reference {
 
-    final String[] FORCE_FIELDS = {"author", "title", "publisher", "year"};
-    final String[] OPTIONAL_FIELDS = {"volume", "series", "address", "edition", "month", "note", "key"};
+    public final static String[] FORCE_FIELDS = {"author", "title", "publisher", "year"};
+    public final static String[] OPTIONAL_FIELDS = {"volume", "series", "address", "edition", "month", "note", "key"};
 
     public Book(String ck) {
         super(ck);
